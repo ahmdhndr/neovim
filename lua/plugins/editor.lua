@@ -114,14 +114,6 @@ return {
         end,
         desc = "Lists Diagnostics for all open buffers or a specific buffer",
       },
-      -- {
-      --   ";s",
-      --   function()
-      --     local builtin = require("telescope.builtin")
-      --     builtin.treesitter()
-      --   end,
-      --   desc = "Lists Function names, variables, from Treesitter",
-      -- },
       {
         ";c",
         function()
@@ -140,7 +132,7 @@ return {
           end
 
           telescope.extensions.file_browser.file_browser({
-            path = "%:p:h",
+            path = telescope_buffer_dir(),
             cwd = telescope_buffer_dir(),
             respect_gitignore = false,
             hidden = true,

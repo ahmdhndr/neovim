@@ -5,6 +5,8 @@
 -- LSP Server to use for PHP.
 -- Set to "intelephense" to use intelephense instead of phpactor.
 vim.g.lazyvim_php_lsp = "intelephense"
+vim.opt.exrc = true
+vim.opt.secure = true
 
 -- NEOVIDE CONFIG
 if vim.g.neovide then

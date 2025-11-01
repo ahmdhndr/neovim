@@ -114,3 +114,23 @@ vim.keymap.set("n", "/sr", function()
   -- ganti ke find..replace sesuai kebutuhan
   vim.cmd(string.format("%%s/\\V%s/%s/gc", vim.fn.escape(find, "/\\"), replace))
 end, { desc = "Find & Replace current file" })
+
+-- tampilkan diagnostic lengkap untuk baris saat ini
+vim.keymap.set("n", "<leader>de", function()
+  vim.diagnostic.open_float(nil, {
+    focus = false,
+    scope = "line",
+    border = "rounded",
+    source = "always",
+  })
+end, { desc = "Show full diagnostic message" })
+
+vim.diagnostic.config({
+  float = {
+    border = "rounded",
+    focusable = true,
+    source = "always",
+    header = "",
+    prefix = "",
+  },
+})

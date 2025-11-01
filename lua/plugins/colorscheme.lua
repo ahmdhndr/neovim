@@ -3,12 +3,20 @@ return {
   {
     "ellisonleao/gruvbox.nvim",
     opts = {
-      transparent = true,
+      transparent_mode = false,
       terminal_colors = true,
       inverse = true,
       dim_inactive = true,
       undercurl = true,
       underline = true,
+      italic = {
+        strings = true,
+        emphasis = true,
+        comments = true,
+        operators = false,
+        folds = true,
+      },
+      invert_selection = true,
     },
   },
 
@@ -16,7 +24,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "gruvbox",
     },
   },
 }

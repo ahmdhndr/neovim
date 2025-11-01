@@ -8,15 +8,6 @@ return {
       hidden = true,
       ignored = true,
       sources = {
-        files = {
-          hidden = true,
-          ignored = true,
-          exclude = {
-            ".git", -- Excludes all content within .git directories
-            "node_modules", -- Excludes all content within node_modules directories
-            "*.log",
-          },
-        },
         explorer = {
           hidden = true,
           ignored = true,
@@ -32,6 +23,9 @@ return {
           },
         },
       },
+    },
+    bigfile = {
+      size = 1.5 * 1024 * 1024,
     },
   },
   keys = {
