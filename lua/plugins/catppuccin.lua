@@ -5,7 +5,7 @@ return {
   opts = {},
   config = function()
     require("catppuccin").setup({
-      flavour = "macchiato",
+      flavour = "mocha",
       term_colors = true,
       lsp_styles = {
         virtual_text = {
